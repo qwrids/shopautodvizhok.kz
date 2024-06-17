@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './vars';
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: $text-dark-rgb;
+  background: $background-rgb;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+h1 {
+  font-weight: 600;
+}
+// h2 {
+//   color: $background-rgb;
+//   background-color: $foreground-rgb;
+//   @apply text-6xl px-12 py-6 rounded-2xl font-bold;
+// }
+
+.card {
+  color: $background-rgb;
+  background-color: $foreground-rgb;
+  @apply px-12 py-6 rounded-2xl text-center;
+}
+
+.background {
+  background: $background-rgb;
+}
+.foreground {
+  background: $foreground-rgb;
+}
+.button {
+  background: $button-rgb;
+}
+.light-text {
+  color: $text-light-rgb;
+}
+.dark-text {
+  color: $text-dark-rgb;
+}
+.button-text {
+  color: $button-rgb;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1520px;
+}
+
+.map {
+  @apply flex justify-center;
+  div {
+    width: 100%;
+  }
+}

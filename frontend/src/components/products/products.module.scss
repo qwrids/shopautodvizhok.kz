@@ -1,0 +1,65 @@
+@import '@/app/vars';
+.product {
+  @apply flex flex-col justify-between p-4 rounded-lg h-full;
+  .image {
+    background-color: $background-rgb;
+    height: 370px;
+    @apply flex justify-center items-center rounded-lg p-2 mb-4;
+    img {
+      @apply rounded-lg;
+      max-height: 100%;
+      width: auto;
+    }
+  }
+  .info {
+    @apply flex flex-col justify-between;
+    h4 {
+      @apply font-light;
+    }
+    h3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3; // количество строк
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @apply font-bold text-2xl;
+    }
+  }
+
+  .cart_add {
+    background: $button-rgb;
+    color: $foreground-rgb;
+    @apply px-4 py-2 rounded-lg w-full mt-2 font-medium hover:opacity-80 duration-300 ease-in-out;
+  }
+}
+.product_cart {
+  @apply pl-2 pr-8 py-4 rounded-lg;
+  background-color: $background-rgb;
+  .product_content {
+    @apply flex gap-8;
+    .image {
+      @apply rounded-3xl;
+      img {
+        width: 100px;
+      }
+    }
+    .info {
+      @apply flex flex-col justify-center min-w-72;
+      color: $foreground-rgb;
+      h4 {
+        @apply font-light;
+      }
+      h3 {
+        max-width: 200px;
+        @apply font-bold text-2xl;
+      }
+    }
+  }
+  .counter {
+    @apply flex gap-1 text-center cursor-pointer mt-6;
+    color: $background-rgb;
+    p {
+      @apply w-8 h-8 rounded-lg flex justify-center items-center font-bold hover:opacity-90 duration-300 ease-in-out;
+      background-color: $foreground-rgb;
+    }
+  }
+}

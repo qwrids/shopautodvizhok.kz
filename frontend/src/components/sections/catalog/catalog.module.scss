@@ -1,0 +1,19 @@
+@import '@/app/vars';
+.inner {
+  // background-color: $foreground-rgb;
+  @apply flex flex-col;
+
+  p {
+    @apply text-xl mt-2;
+  }
+  .heading {
+    @apply flex justify-between items-center my-8;
+    .filters {
+      @apply flex gap-4;
+    }
+  }
+
+  .list {
+    @apply grid grid-cols-4 gap-4;
+  }
+}

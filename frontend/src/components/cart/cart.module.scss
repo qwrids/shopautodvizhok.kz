@@ -1,0 +1,43 @@
+@import '@/app/vars';
+.root {
+  @apply h-screen;
+  .heading {
+    @apply flex justify-between items-center gap-12 mb-4;
+    h3 {
+      @apply text-3xl font-bold;
+    }
+    p {
+      @apply text-xl;
+    }
+    span {
+      @apply font-bold;
+    }
+  }
+  .list {
+    max-height: 75vh;
+    @apply flex flex-col gap-2 overflow-y-auto;
+  }
+  button {
+    background-color: $background-rgb;
+    color: $foreground-rgb;
+    @apply w-full py-4 rounded-md mt-2;
+  }
+}
+.order {
+  form {
+    @apply flex flex-col gap-2;
+    label {
+      color: $text-dark-rgb;
+    }
+    input {
+      color: $text-dark-rgb;
+      @apply px-4 py-2 block rounded-sm;
+    }
+  }
+
+  button {
+    background-color: $button-rgb;
+    color: $text-dark-rgb;
+    @apply w-full py-2 mt-4 rounded-sm;
+  }
+}

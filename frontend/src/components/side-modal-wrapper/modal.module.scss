@@ -1,0 +1,16 @@
+@import '@/app/vars';
+.root {
+  @apply z-40 pointer-events-none fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-0;
+  .content {
+    background: $foreground-rgb;
+    color: $background-rgb;
+    @apply absolute top-0 right-0 z-40 h-screen translate-x-full  duration-300 ease-in-out;
+  }
+  .active {
+    @apply translate-x-0;
+  }
+}
+
+.root_active {
+  @apply pointer-events-auto bg-opacity-30 block  duration-200 ease-in-out;
+}

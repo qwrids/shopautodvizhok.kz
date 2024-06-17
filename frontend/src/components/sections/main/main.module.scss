@@ -1,0 +1,37 @@
+@import '@/app/vars';
+.root {
+  height: 90vh;
+  @apply flex justify-between items-center py-36;
+  h1 {
+    font-size: 64px;
+    font-weight: 400;
+  }
+  .title {
+    max-width: 800px;
+    p {
+      color: #ff5c19;
+    }
+  }
+
+  // .main_bg {
+  //   @apply relative flex items-center;
+  &_img {
+    @apply flex justify-center items-center;
+    background-color: $foreground-rgb;
+    width: 490px;
+    height: 490px;
+    border-radius: 50%;
+    p {
+      color: $background-rgb;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: 72px;
+      font-weight: bold;
+    }
+    // }
+    img {
+      left: -120px;
+      @apply absolute;
+    }
+  }
+}

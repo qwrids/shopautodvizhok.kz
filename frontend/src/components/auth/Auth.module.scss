@@ -1,0 +1,36 @@
+@import '@/app/vars';
+.root {
+  @apply flex flex-col gap-2;
+  label {
+    @apply mb-1;
+  }
+  input {
+    @apply bg-gray-400 bg-opacity-20 outline-none pl-3 pr-10 py-2 rounded-md  text-sm w-full;
+  }
+  span {
+    @apply flex justify-center items-center h-full cursor-pointer;
+    svg {
+      @apply absolute mr-10;
+    }
+  }
+  .submit {
+    background-color: $foreground-rgb;
+    color: $background-rgb;
+    @apply w-full py-2 disabled:opacity-50 mt-2 rounded-md;
+  }
+}
+
+.auth {
+  background: $background-rgb;
+  @apply flex flex-col justify-center max-w-96 m-auto px-20 py-10 rounded-md;
+  .auth_toggle {
+    @apply flex justify-between;
+    p {
+      @apply text-xl cursor-pointer hover:opacity-80 p-2 mb-4 font-medium;
+    }
+    .active {
+      border-bottom: 2px solid $foreground-rgb;
+      @apply border-b-2;
+    }
+  }
+}
